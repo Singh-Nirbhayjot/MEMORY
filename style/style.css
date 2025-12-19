@@ -7,16 +7,27 @@ body{
 }
 
 #giocof, #giocom, #giocod {
-    text-align: center; 
     margin-top: 20px;
+    justify-content: center;
+    align-content: start;
+    gap: 5px;
 }
 
-#giocof button,
-#giocom button,
-#giocod button {
-    display: inline-block; 
-    margin: 5px;
-    font-size: 24px;
+
+#giocof { 
+    display: grid; 
+    grid-template-columns: repeat(4, 80px); 
+}
+#giocom { 
+    display: grid; 
+    grid-template-columns: repeat(6, 50px); 
+}
+#giocod { 
+    display: grid; 
+    grid-template-columns: repeat(8, 70px); }
+
+#giocof button, #giocom button, #giocod button {
+    padding: 0;
     border: 1px solid gray;
     border-radius: 5px;
     background-color: white;
@@ -32,9 +43,17 @@ body{
     height: 50px; 
 }
 #giocod button { 
-    width: 40px;
-    height: 40px;
- }
+    width: 40px; 
+    height: 40px; 
+}
+
+#giocof button img,
+#giocom button img,
+#giocod button img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 
 button:disabled {
     background-color: lightgray;
